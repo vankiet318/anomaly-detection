@@ -222,12 +222,6 @@ def render_sidebar(categories):
     )
     model = get_model(category)
 
-    metrics = model.metrics
-    col1, col2, col3 = st.sidebar.columns(3)
-    col1.metric("Image AUROC", f"{metrics['image_auroc']:.3f}")
-    col2.metric("Pixel AUROC", f"{metrics['pixel_auroc']:.3f}")
-    col3.metric("F1", f"{metrics['best_f1']:.3f}")
-
     # key theo category -> đổi loại sản phẩm thì ngưỡng về giá trị mặc định của loại đó
     threshold = st.sidebar.slider(
         "Ngưỡng anomaly score",
