@@ -1,0 +1,9 @@
+# Bản torch CPU (nhẹ hơn nhiều bản CUDA) — Streamlit Community Cloud không có GPU
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+torchvision>=0.17
+streamlit>=1.50
+numpy
+pandas
+pillow
+matplotlib
